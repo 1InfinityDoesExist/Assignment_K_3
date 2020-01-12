@@ -136,7 +136,7 @@ public class AvatarController {
 	@RequestMapping(path = "/get", method = RequestMethod.GET, produces = "application/json")
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
-	@ApiOperation(value = "/get", notes = "Get Resource By Avatar", response = Avatar.class)
+	@ApiOperation(value = "/get1", notes = "Get Resource By Avatar", response = Avatar.class)
 	public ResponseEntity<?> getResource(
 			@ApiParam(value = "id", required = true) @RequestParam(value = "id", required = true) Long id) {
 		logger.info("*************************Get Resource By ID*****************************");
@@ -147,7 +147,7 @@ public class AvatarController {
 		return new ResponseEntity<Avatar>(avatar, HttpStatus.OK);
 	}
 
-	@RequestMapping(path = "/get", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(path = "/get2", method = RequestMethod.GET, produces = "application/json")
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
 	@ApiOperation(value = "/get", notes = "Get Resource By Avatar", response = Avatar.class, responseContainer = "LIST")
